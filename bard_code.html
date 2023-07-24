@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Portfolio</title>
+<style>
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.portfolio-image {
+  width: 200px;
+  height: 200px;
+}
+.portfolio-title {
+  font-size: 18px;
+}
+.portfolio-description {
+  font-size: 14px;
+}
+</style>
+</head>
+<body>
+<div class="portfolios">
+  {% for portfolio in portfolios %}
+    <div class="portfolio">
+      <img class="portfolio-image" src="{{ portfolio.image_url }}" />
+      <h2 class="portfolio-title">{{ portfolio.title }}</h2>
+      <p class="portfolio-description">{{ portfolio.description }}</p>
+    </div>
+  {% endfor %}
+</div>
+<script>
+function showPortfolio(index) {
+  var portfolios = document.getElementsByClassName("portfolio");
+  for (var i = 0; i < portfolios.length; i++) {
+    if (i == index) {
+      portfolios[i].style.display = "block";
+    } else {
+      portfolios[i].style.display = "none";
+    }
+  }
+}
+</script>
+</body>
+</html>

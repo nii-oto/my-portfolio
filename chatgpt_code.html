@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Portfolio Showcase</title>
+    <style>
+        /* Embedded CSS for gallery styling */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        .portfolio-container {
+            overflow-x: auto;
+            white-space: nowrap;
+            padding: 10px;
+        }
+
+        .portfolio-item {
+            display: inline-block;
+            border: 1px solid #ddd;
+            margin-right: 10px;
+            padding: 10px;
+            width: 200px;
+        }
+
+        .portfolio-image {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Portfolio Showcase</h1>
+
+    <!-- Container for the scrolling portfolios -->
+    <div class="portfolio-container">
+        <!-- Portfolio item 1 -->
+        <div class="portfolio-item">
+            <img class="portfolio-image" src="portfolio1.jpg" alt="Portfolio 1">
+            <p>Portfolio 1 description</p>
+        </div>
+
+        <!-- Portfolio item 2 -->
+        <div class="portfolio-item">
+            <img class="portfolio-image" src="portfolio2.jpg" alt="Portfolio 2">
+            <p>Portfolio 2 description</p>
+        </div>
+
+        <!-- Add more portfolio items up to 10 -->
+
+        <!-- Portfolio item 10 -->
+        <div class="portfolio-item">
+            <img class="portfolio-image" src="portfolio10.jpg" alt="Portfolio 10">
+            <p>Portfolio 10 description</p>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript code for scrolling effect
+        const container = document.querySelector(".portfolio-container");
+
+        function scrollPortfolios() {
+            const scrollAmount = 5; // Adjust the scroll speed here
+            container.scrollLeft += scrollAmount;
+        }
+
+        // Set the scroll interval
+        const scrollInterval = setInterval(scrollPortfolios, 50); // Adjust the scroll interval (milliseconds) to control speed
+
+        // Pause scrolling when hovering over the container
+        container.addEventListener("mouseover", () => {
+            clearInterval(scrollInterval);
+        });
+
+        // Resume scrolling when mouse leaves the container
+        container.addEventListener("mouseout", () => {
+            scrollInterval = setInterval(scrollPortfolios, 50);
+        });
+    </script>
+</body>
+</html>
