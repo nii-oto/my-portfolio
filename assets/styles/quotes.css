@@ -1,0 +1,58 @@
+body{
+    font-family: 'Ubuntu', sans-serif;
+    margin: 10px;
+}
+.head1{
+    color:rgb(250, 246, 246);
+    background-color: rgb(13, 24, 1);
+    padding: 50px;
+    border: 10px solid white;
+    
+}
+#head2{
+    color:rgb(231, 81, 81);
+}
+.b1{
+    border:10px solid black;
+    background-color: rgb(148, 206, 170);
+    padding:20px;
+    width: 200px;
+    height: 200px;
+}
+.b2{
+    border: solid black;
+    border-width: 20px 10px;
+    background-color: rgb(252, 248, 31);
+    padding:20px;
+    width: 200px;
+    height: 200px;
+    margin-left: 250px
+}
+.b3{
+    border:10px solid black;
+    background-color: brown;
+    padding:20px;
+    width: 180px;
+    height: 300px;
+    margin-left:20px;
+
+}
+.quote-box-main{
+    width: 1000px;
+}
+img{
+    width: 200px;
+    border: 5px solid white;
+    margin: 10px;
+}
+.quote-box{
+    width: 150px;
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+}
+.quote-head2{
+    font-size: 2rem;
+}
